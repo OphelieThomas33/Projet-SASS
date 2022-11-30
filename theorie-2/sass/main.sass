@@ -1,0 +1,20 @@
+// main.sass => Fichier d'entrée de mon compilateur 
+// Ici je dois indiquer tous les fichiers SASS nécessaires à la stylisation de mon site
+// Eviter le CSS dans le main, il sert juste de fichier d'entrée pour le compilateur
+
+// Utils 
+// à déclarer en premier pour pouvoir les utiliser dans les autres fichiers
+// @import "./utils/_variables"  => ancienne méthode (import global)
+// à mettre désormais dans chacun des sous-fichiers où l'on utilise les variables
+
+// Base  
+@forward "./base/_body"
+
+// Layouts
+
+// Components
+@forward "components/_component-paragraphe"
+
+// Atoms
+@forward "atoms/_atom-title"
+@forward "atoms/_atom-avatar"
