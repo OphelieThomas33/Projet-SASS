@@ -1,0 +1,13 @@
+@use "../base/_typos"
+@use "../utils/_placeholder" as placeholder
+
+.hero
+    background-color: red
+    .main-title
+        @extend .title-1
+        @extend .text-blue
+    p
+        @extend .text-paragraphe
+        color: white
+    h2
+        @extend %title-h2
