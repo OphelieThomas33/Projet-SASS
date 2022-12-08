@@ -1,0 +1,16 @@
+@use "../utils/_main" as utils
+
+.home-cover
+    background-color: utils.$blue-white
+
+    &__title
+        @extend %title-1
+
+        span
+            @extend %text-blue
+
+    &__paragraphe     
+        @extend %paragraphe
+        @extend %text-grey-dark
+
+    

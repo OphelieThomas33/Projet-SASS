@@ -1,6 +1,11 @@
+@use "../utils/_main" as utils 
+
 .header
-    display: flex
     padding: 1.5rem 0
+    background-color: utils.$blue-white
+
+    div
+        display: flex
 
     &__logo
         width: 10rem
@@ -16,3 +21,5 @@
     &__list
         display: flex
         column-gap: 1.5rem
+        @extend %paragraphe
+        @extend %text-grey
