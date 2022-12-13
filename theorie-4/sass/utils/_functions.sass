@@ -1,0 +1,10 @@
+@function pixelToRem($value)
+    // 16 px = 1 rem
+    // 32 px = ?? 
+    // interpolation : #{variable}
+    // @return #{($value * 1) / 16}rem   // #{} obligatoire pour que le compilateur comprenne qu'il y a un calcul et une unité de valeur
+    
+    // si on veut des valeurs arrondies
+    $remValue: ($value * 1) / 16
+    $remValueCeil: ceil($remValue)
+    @return #{$remValueCeil}rem
