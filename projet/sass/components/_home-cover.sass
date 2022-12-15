@@ -3,6 +3,14 @@
 .home-cover
     background-color: utils.$blue-white
 
+    &__container
+        @include utils.flex(flex-start)
+
+    &__text
+        flex-grow: 1
+        background-color: orange
+        padding-right: 5rem
+
     &__title
         @extend %title-1
 
@@ -12,5 +20,34 @@
     &__paragraphe     
         @extend %paragraphe
         @extend %text-grey-dark
+        @extend %top-s
+
+    &__cta
+        background-color: yellow
+        padding-right: 7.5rem
+        @extend %top-m
+
+    &__medias
+        width: 50%
+        position: relative
+        flex-shrink: 0
+
+    &__image
+        width: 100%
+        height: auto
+
+    &__play
+        position: absolute
+        top: 50%  // 50%  de mon parent 
+        left: 50%  // 50% de mon parent 
+        transform: translateX(-50%) translateY(-50%)   // 50% de l'élément lui-même
+        fill: white
+        width: 5rem
+        height: 5rem
+        background-color: utils.$grey-dark
+        border-radius: 100%
+        +utils.flex(center) // + raccourci de @include
+
+
 
     
