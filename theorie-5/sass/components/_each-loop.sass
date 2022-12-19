@@ -1,0 +1,36 @@
+// $sizes[0] = 30px
+// $sizes[1] = 40px
+// $sizes[2] = 50px
+$sizes: 30px, 40px, 50px
+
+// $types["error"] = red
+// $types["success"] = green
+// $types["warning"] = orange
+
+$types: ("error": red, "success": green, "warning": orange)
+
+.each-loop
+
+    // BOUCLE
+    // pour les éléments HTML qui ont la classe XX
+    // il faut attribuer la propriété CSS assignée dans ma liste
+
+    // si tableau avec uniquement des valeurs :
+    // @each $maNouvelleVariable in $monTableauDeVariables
+    // si tableau avec une paire clé-valeur : 
+    // @each $clé, $valeur in $monTableauDeVariables
+    @each $className, $color in $types
+        .#{$className}
+            color: $color
+
+    
+    // .error
+    //     color: red
+
+
+    // .success
+    //     color: green
+    
+    // .warning
+    //     color: orange
+    

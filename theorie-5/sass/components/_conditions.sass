@@ -1,0 +1,12 @@
+@use "../utils/_mixins" as mixin
+
+.conditions
+
+    .circle
+        @include mixin.avatar($circle: true)
+
+    .square
+        @include mixin.avatar
+
+    .rounded-square
+        @include mixin.avatar($rounded: true)

@@ -1,0 +1,30 @@
+.for-loop
+    background: red
+
+    // boucle : 
+    // pour chacun de mes enfants de .for-loop
+    // j'incrémente le margin-left de + 10px
+    // INTERPOLATION #{}  => équivalent en JS : '${}'
+
+    @for $i from 1 through 4
+        div:nth-child(#{$i})
+            margin-left: #{$i * 10}px
+            background-color: darken(red, $i * 10%)
+            &::before
+                content: "#{$i} - "
+
+    // SANS BOUCLE 
+    // il aurait fallu toutes ces lignes pour faire la même chose
+
+    // div:nth-child(1)
+    //     margin-left: 10px
+
+    // div:nth-child(2)
+    //     margin-left: 20px
+
+    // div:nth-child(3)
+    //     margin-left: 30px
+
+    // div:nth-child(4)
+    //     margin-left: 40px
+
