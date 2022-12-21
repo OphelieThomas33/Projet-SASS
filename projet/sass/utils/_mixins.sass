@@ -3,3 +3,33 @@
     justify-content: $justify
     align-items: $align
     flex-direction: $direction
+
+// $phone: 600px
+// $tablet: 900px
+// $small-laptop: 1200px
+
+@mixin responsive($device)
+    @if $device == "phone"
+        @media screen and (max-width: 600px)
+            @content
+
+    @else if $device == "tablet"
+        @media screen and (max-width: 900px)
+            @content
+
+
+    @else if $device == "small-laptop"
+        @media screen and (max-width: 1200px)
+            @content
+
+    @else 
+       @error "La device passée n'existe pas"
+    
+    // phone : 600px
+    // @media screen (max-width: $max-width)
+
+    //  // tablet
+    // @media screen (max-width: 900px)    
+
+    // // small-laptop
+    // @media screen (max-width: 1200px)    
